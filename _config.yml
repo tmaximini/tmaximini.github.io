@@ -1,2 +1,26 @@
-name: maxi.io
-pygments: true
+# Dependencies
+markdown:	redcarpet
+pygments:	true
+
+# Permalinks
+permalink:	/blog/:title
+
+# Setup
+title:		Thinny
+tagline:	'blog'
+description:	'My personal blog.'
+url:		http://maxi.io
+
+author:
+  name:	'Thomas Maximini'
+  url:	https://maxi.io
+
+paginate:	6
+
+# Custom vars
+icon: /assets/images/icon.png
+cover: /assets/images/cover.jpg
+version:	1.0.0
+github:
+  repo:	https://github.com/tmaximini/maxi.io
+copyright: <p class="copyright">&copy;2014, <a href="http://maxi.io" target="_blank">Thomas Maximini</a>. <a href="http://creativecommons.org/licenses/by-nc/2.5/br/" target="_blank">Some rights reserved</a>.</p>
