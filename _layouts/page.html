@@ -1,21 +1,14 @@
 ---
 layout: default
 ---
+<div class="post">
 
-<header class="clean" style="height: 350px; background-image: url({{ site.cover }});">
-	{% include top.html %}
-	<div id="home-title">
-		<a href="{{ site.url }}">
-			<img src="{{ site.icon }}" class="site-icon-page">
-		</a>
-	</div>
-	<div id="post-info" style="bottom: 30px; text-align: center; line-height: 45px;">
-		<h1>{{ page.title }}</h1>
-	</div>
-</header>
-<div id="article">
-	{{ content }}
+  <header class="post-header">
+    <h1>{{ page.title }}</h1>
+  </header>
+
+  <article class="post-content">
+  {{ content }}
+  </article>
+
 </div>
-<footer class="clean" style="background-image: url({{ site.cover }}); background-position: bottom; height: 60px;">
-	{{ site.copyright }}
-</footer>

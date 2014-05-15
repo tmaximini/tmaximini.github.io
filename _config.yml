@@ -1,26 +1,12 @@
-# Dependencies
-markdown:	redcarpet
-pygments:	true
+# Site settings
+name: maxi.io
+title: Javascript and other obscurities
+email: thomas@gmail.com
+username: tmaximini
+description: "Hi there. My name is Thomas Maximini and I am a Javascript developer and DJ from Berlin. This is my personal homepage where you can find blog posts, projects and DJ mixes."
+baseurl: ""
+url: "http://maxi.io"
 
-# Permalinks
-permalink:	/blog/:title
-
-# Setup
-title:		Thinny
-tagline:	'blog'
-description:	'My personal blog.'
-url:		http://maxi.io
-
-author:
-  name:	'Thomas Maximini'
-  url:	https://maxi.io
-
-paginate:	6
-
-# Custom vars
-icon: /assets/images/icon.png
-cover: /assets/images/cover.jpg
-version:	1.0.0
-github:
-  repo:	https://github.com/tmaximini/maxi.io
-copyright: <p class="copyright">&copy;2014, <a href="http://maxi.io" target="_blank">Thomas Maximini</a>
+# Build settings
+markdown: kramdown
+permalinks: pretty
