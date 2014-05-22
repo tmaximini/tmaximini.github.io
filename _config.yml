@@ -1,9 +1,9 @@
 # Site settings
 name: maxi.io
-title: Javascript and other obscurities
-email: thomas@gmail.com
+title: Javascript and Records!
+email: tmaximini@gmail.com
 username: tmaximini
-description: "Hi there. My name is Thomas Maximini and I am a Javascript developer and DJ from Berlin. This is my personal homepage where you can find blog posts, projects and DJ mixes."
+description: "Hi there. My name is Thomas and I am a Javascript developer and DJ from Berlin. This is my personal homepage where I occasionally blog, showcase projects and upload DJ mixes."
 baseurl: ""
 url: "http://maxi.io"
 
