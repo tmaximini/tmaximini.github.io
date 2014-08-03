@@ -4,7 +4,7 @@ title: Javascript and Records!
 email: tmaximini@gmail.com
 username: tmaximini
 description: "Hi there. My name is Thomas and I am a Javascript developer and DJ from Berlin. This is my personal homepage where I occasionally blog, showcase projects and upload DJ mixes."
-baseurl: "http://maxi.io"
+baseurl: ""
 
 collections:
   projects:
