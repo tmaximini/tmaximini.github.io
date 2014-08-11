@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: inherit;
 }
-html {
+html, html > div {
   box-sizing: border-box;
 }
 
