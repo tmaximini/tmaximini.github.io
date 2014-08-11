@@ -28,3 +28,5 @@ exclude: [
 # Build settings
 markdown: kramdown
 permalinks: pretty
+highlighter: pygments
+excerpt_separator: N/A-------N/A
