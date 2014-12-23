@@ -17,7 +17,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 700; }
 
-a         { color: #616161; text-decoration: none; }
+a         { color: #ffffff; text-decoration: none; }
 a:hover   { color: #000; text-decoration: underline; }
 
 
@@ -41,7 +41,7 @@ a:hover   { color: #000; text-decoration: underline; }
 
 
 header, h1, h2, h3, h4, h5, h6, .post-link, .post-date {
-  font-family: 'Ubuntu Condensed', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* Site header */
@@ -50,7 +50,7 @@ header, h1, h2, h3, h4, h5, h6, .post-link, .post-date {
 .site-title:hover,
 .site-title:visited {
   display: block;
-  color: #616161;
+  color: #ffffff;
   font-size: 26px;
   float: left;
   line-height: 56px;
@@ -69,8 +69,7 @@ header, h1, h2, h3, h4, h5, h6, .post-link, .post-date {
 
 .site-nav .page-link {
   margin-left: 20px;
-  color: #727272;
-  letter-spacing: -.5px;
+  color: #ffffff;
 }
 
 /* Site footer */
@@ -116,7 +115,7 @@ header, h1, h2, h3, h4, h5, h6, .post-link, .post-date {
 .site-footer p {
   font-size: 15px;
   letter-spacing: -.3px;
-  color: #616161;
+  color: #ffffff;
 }
 
 .github-icon-svg,
@@ -151,7 +150,7 @@ header, h1, h2, h3, h4, h5, h6, .post-link, .post-date {
   font-size: 24px;
   letter-spacing: -1px;
   line-height: 1;
-  color: #337AB1;
+  color: #5478A1;
 }
 
 .posts .post-date {
