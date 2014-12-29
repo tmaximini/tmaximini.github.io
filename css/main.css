@@ -39,9 +39,13 @@ a:hover   { color: #000; text-decoration: underline; }
 /* Layout Styles */
 /* ----------------------------------------------------------*/
 
-
-header, h1, h2, h3, h4, h5, h6, .post-link, .post-date {
+header, .post-date {
   font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6, .post-link {
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Site header */
@@ -358,7 +362,7 @@ header, h1, h2, h3, h4, h5, h6, .post-link, .post-date {
   .footer-col-3 {
     text-align: left;
     padding-top: 10px;
-    border-top: 1px solid #fff;
+    border-top: 1px dashed #fff;
   }
 
   .site-nav {
@@ -367,14 +371,12 @@ header, h1, h2, h3, h4, h5, h6, .post-link, .post-date {
     top: 14px; right: 8px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;
-    border: 1px solid #e8e8e8;
   }
 
   .site-nav .menu-icon {
     display: block;
     font-size: 24px;
-    color: #505050;
+    color: #5478A1;
     float: right;
     width: 36px;
     text-align: center;
@@ -400,6 +402,7 @@ header, h1, h2, h3, h4, h5, h6, .post-link, .post-date {
     text-align: right;
     line-height: 1.25;
     padding: 5px 10px;
+    color: #5478A1;
     margin: 0;
   }
 

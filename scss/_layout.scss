@@ -24,6 +24,21 @@ body {
   position: relative;
 }
 
+.post {
+  color: #454545;
+
+  a {
+    color: #454545;
+    text-decoration: underline;
+    transition: color 0.25s ease-in-out;
+    &:hover, &:active {
+      text-decoration: none;
+      color: #337AB1;
+    }
+  }
+
+}
+
 
 
 
