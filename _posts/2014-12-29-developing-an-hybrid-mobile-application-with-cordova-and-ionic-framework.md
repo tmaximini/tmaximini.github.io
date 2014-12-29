@@ -1,0 +1,42 @@
+---
+title: Developing an hybrid mobile application with Cordova and Ionic Framework
+layout: post
+date: 2014-12-29
+---
+
+## Hybrid mobile applications
+I recently spend a good amount of time developing an application using the [Ionic Framework](http://ionicframework.com/). In this post I am going to share my experiences and the things I learned on the way.
+
+If you don't know, Ionic is a framework that sits on top of [Angular.js](https://angularjs.org/) that is designed to let you write mobile hybrid apps. Mobile hybrid applications are applications entirely written in HTML5, CSS and Javascript and then get packaged into an installable, hopefully native looking application that can be distributed via the different App Stores.
+The difference is that hybrid applications live entirely inside a *WebView* of the device's operating system. 
+This means that these applications will be affected by the different browser versions, OS versions and by the performance of the devices they are installed on. Both [iOS](http://nshipster.com/wkwebkit/) and [Android](https://developer.chrome.com/multidevice/webview/overview) are catching up though with the features and the performance of their WebViews, which is a good thing.
+
+While Ionic is still a relatively young framework (currently in 1.0.0-beta13 at the time of this writing), hybrid mobile apps have been around for a long time by now. The problem with these apps is that they often feel clunky and slow compared to well-known native apps. 
+The main reason for that is not always bad browsers or old hardware but too often it is unperformant and badly optmized code. There are a lot of things to consider when writing performant web applications, especially for lower end devices. We'll get to that in a minute.
+
+## Ionic, just UI?
+When yoiu talk to people about Ionic, they will probably tell you something in the veins of "iOS7.css" or "that's just an UI Layer around Angular". Which is kind of true as a huge part of Ionic is about giving you a beautiful, iOS7'ish look. Basically it is an opinionated collection of Angular directives and css classes that cover a lot of use cases when building an app. [Swipeable boxes](http://ionicframework.com/docs/api/directive/ionSlideBox/), [pull-to-refresh lists](http://ionicframework.com/docs/api/directive/ionRefresher/), [tab navigations](http://ionicframework.com/docs/api/directive/ionTabs/) [etc](http://ionicframework.com/docs/api/directive/ionSideMenus/). You name it.
+What I especially like about Ionic so far is its [excellent documentation](http://ionicframework.com/docs/), the amount of [learning resources](http://learn.ionicframework.com/), the cli tooling and the active community (#ionic at Freenode).
+
+
+## Don't fuck with native scroll
+One of the big letdowns with Ionic has been the scroll performance. Everything worked great developing on my desktop browser emulating mobile devices, but as soon as we compiled the app on the phone it *lagged*. The lag was real.
+The problem with Ionic lists is, that by default Ionic uses a Javascript based scrolling mechanism, which calculates the scroll position in a view and animates it whenever the view is scrolled. While this looks really good and solves a lot of compatibility issues between different devices and browsers it certainly is a huge performance issue with longer list. For us, lists with around 25-50 items and some images already rendered close to unusable on iPhone4 and 4s. Imagine you'd want to make some timeline app such as Twitter.
+As stated by the core team members, [Ionic is targeted towards newer devices](https://github.com/driftyco/ionic/issues/287#issuecomment-30441099), which makes totally sense from a deveoping point of view. The problem is you can not convince your customer's that the app can only run on newer devices, it should run performant on older devices as well.
+
+There are two solutions for the scrolling performance problem:
+1. Using [collection-repeat](http://ionicframework.com/docs/api/directive/collectionRepeat/) instead ng-repeat 
+2. Using native scroll
+
+### collection-repeat
+Quoting the docs, *collection-repeat is a directive that allows you to render lists with thousands of items in them, and experience little to no performance penalty*. This sounds pretty awesome. And it is pretty awesome too: The idea behind collection-repeat is that it renders only the items that are currently visible inside the viewport, so if you have 2000 items but only 10 items fit into your screen than 10 items will be rendered instead of 2000 (The problem with the performance of huge lists is usually the *painting* in the browser). The problem with collection-repeat however is that the items need to be of the same height (more or less at least, as collection-item-height takes an expression and thus also could be a  function). So basically  _it makes a responsive layout impossible_, assuming you want to use 100% width and height: auto; or something like this.
+It is very useful though for simple items of the same height.
+
+### native scrolling
+
+-  the problem is it not supported pull-to-refresh and infinite-load.
+- supported in ion-content http://ionicframework.com/docs/api/directive/ionContent/
+- super performant
+- more work to get functionality right, differences on iOS and Android
+- still only solution for flexible, performant lists 
+
