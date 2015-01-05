@@ -7,6 +7,7 @@
 	var toggleMenu = function() {
 		if (menu) {
 			menu.classList.toggle('visible');
+			burger.classList.toggle('close');
 		}
 	};
 

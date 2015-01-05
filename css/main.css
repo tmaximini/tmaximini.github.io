@@ -17,8 +17,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 700; }
 
-a         { color: #ffffff; text-decoration: none; }
-a:hover   { color: #000; text-decoration: underline; }
+
 
 
 
@@ -334,33 +333,6 @@ h1, h2, h3, h4, h5, h6, .post-link {
 /* ----------------------------------------------------------*/
 
 
-@media screen and (max-width: 750px) {
-
-  .footer-col-1 { width: 50%; }
-
-  .footer-col-2 {
-    width: 45%; /*fallback*/
-    width: -webkit-calc(50% - 10px);
-    width: -moz-calc(50% - 10px);
-    width: -o-calc(50% - 10px);
-    width: calc(50% - 10px);
-    margin-right: 0;
-  }
-
-  .footer-col-3 {
-    text-align: left;
-    padding-top: 10px;
-    border-top: 1px solid #fff;
-  }
-
-  .site-footer .column.footer-col-3 {
-    width: auto;
-    float: none;
-    clear: both;
-  }
-
-}
-
 @media screen and (max-width: 600px) {
 
   .wrap {
@@ -377,30 +349,21 @@ h1, h2, h3, h4, h5, h6, .post-link {
   .site-nav {
     position: absolute;
     z-index: 10;
-    top: 14px; right: 8px;
+    top: 6px;
+    right: 8px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
   }
 
   .site-nav .menu-icon {
     display: block;
-    font-size: 24px;
-    color: #5478A1;
     float: right;
-    width: 36px;
-    text-align: center;
-    line-height: 36px;
-  }
-
-  .site-nav .menu-icon svg { width: 18px; height: 16px; }
-
-  .site-nav .trigger {
-    clear: both;
-    margin-bottom: 5px;
-    display: none;
   }
 
 
+  .menu-icon:focus {
+    outline: 0;
+  }
 
   .site-nav .page-link {
     display: block;

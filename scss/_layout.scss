@@ -5,6 +5,14 @@ body {
   color: #ffffff;
 }
 
+a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.12s linear;
+  &:hover {
+    color: #26364A;
+  }
+}
 
 .site-header {
   z-index: 20;
@@ -31,15 +39,21 @@ body {
   z-index: 4;
   display: block;
   transition: all 0.12s ease-in-out;
+
+  a {
+    padding: 0 5px;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+  }
+
   &.visible {
     border-top: 1px dashed #fff;
     padding: 5px 12px;
     height: 40px;
-  }
-  a {
-    color: #fff;
-    padding: 0 5px;
-    font-size: 1.2rem;
+    a {
+      opacity: 1;
+    }
   }
 }
 
@@ -57,13 +71,18 @@ body {
     text-decoration: underline;
     transition: color 0.25s ease-in-out;
     &:hover, &:active {
-      text-decoration: none;
       color: #337AB1;
     }
   }
 
 }
 
+.tm-logo {
+  font-weight: 100;
+  b {
+    font-weight: 600;
+  }
+}
 
 
 
