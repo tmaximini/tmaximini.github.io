@@ -1,9 +1,9 @@
 # Site settings
 name: Thomas Maximini
-title: Javascript and Records!
+title: Thomas Maximini - Web and Mobile Developer
 email: tmaximini@gmail.com
 username: tmaximini
-description: "Hi there. My name is Thomas and I am a freelance web developer and DJ from Berlin. This is my personal homepage where I occasionally blog, showcase projects and share DJ mixes."
+description: "Hi there. My name is Thomas and I am a web and mobile developer from Berlin. Another sentence would be da shizzle."
 baseurl: ""
 
 collections:

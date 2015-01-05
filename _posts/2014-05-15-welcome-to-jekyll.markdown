@@ -18,6 +18,28 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
+{% highlight javascript %}
+
+;(function(window) {
+
+	var menu;
+
+	var toggleMenu = function() {
+		console.log('toggle');
+		if (menu) {
+			menu.classList.toggle('visible');
+		}
+	};
+
+	window.onload = function() {
+		menu = document.querySelectorAll('.menu-items')[0];
+		menu.addEventListener('click', toggleMenu, false);
+	};
+
+})(window);
+
+{% endhighlight %}
+
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
 
 [jekyll-gh]: https://github.com/jekyll/jekyll

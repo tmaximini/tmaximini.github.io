@@ -19,9 +19,39 @@ body {
 }
 
 
+.menu-items {
+  width: 100%;
+  text-align:right;
+  padding: 5px 12px;
+  border-top: 1px dashed #fff;
+  display: none;
+  &.visible {
+    display: block;
+  }
+  a {
+    color: #fff;
+    padding: 0 5px;
+    font-size: 1.2rem;
+  }
+}
 
 .page-content {
   position: relative;
+}
+
+.post {
+  color: #454545;
+
+  a {
+    color: #454545;
+    text-decoration: underline;
+    transition: color 0.25s ease-in-out;
+    &:hover, &:active {
+      text-decoration: none;
+      color: #337AB1;
+    }
+  }
+
 }
 
 
