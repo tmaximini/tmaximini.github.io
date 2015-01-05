@@ -29,10 +29,14 @@ a:hover   { color: #000; text-decoration: underline; }
 .wrap:after { content:""; display:table; }
 .wrap:after { clear: both; }
 .wrap {
-  max-width: 800px;
+  max-width: 1024px;
   padding: 0 30px;
   margin: 0 auto;
   zoom: 1;
+}
+
+.site-header .wrap {
+  max-width: 4000px;
 }
 
 
@@ -45,7 +49,7 @@ header, .post-date {
 
 
 h1, h2, h3, h4, h5, h6, .post-link {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Site header */
@@ -66,7 +70,8 @@ h1, h2, h3, h4, h5, h6, .post-link {
 .site-nav {
   float: right;
   line-height: 56px;
-  font-family: 'Ubuntu Condensed', sans-serif;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .site-nav .menu-icon { display: none; }
@@ -358,8 +363,8 @@ h1, h2, h3, h4, h5, h6, .post-link {
 
 @media screen and (max-width: 600px) {
 
-  .wrap { 
-    padding: 0 12px; 
+  .wrap {
+    padding: 0 12px;
     overflow: hidden;
   }
 
@@ -395,7 +400,7 @@ h1, h2, h3, h4, h5, h6, .post-link {
     display: none;
   }
 
-  
+
 
   .site-nav .page-link {
     display: block;
@@ -420,4 +425,25 @@ h1, h2, h3, h4, h5, h6, .post-link {
     width: auto;
     margin: 0 0 15px; }
 
+}
+
+.inner-page-link {
+  display: none;
+  color: #fff;
+  padding: 0 10px;
+  font-size: 1.1rem;
+}
+
+.page-link {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+@media screen and (min-width: 600px) {
+  .inner-page-link {
+    display: inline-block;
+  }
+  .menu-items {
+    display: none;
+  }
 }
