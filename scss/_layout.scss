@@ -1,7 +1,11 @@
+$bg-blue: #6F85A0;
+$bg-grey: #4D555F;
+$home-hover: #26364A;
+
 body {
   //background: url(../images/green_cup/green_cup.png) repeat;
   //background: url(../images/halftone/halftone.png) repeat;
-  background-color: #7697BE;
+  background-color: $bg-blue;
   color: #ffffff;
 }
 
@@ -10,12 +14,13 @@ a {
   text-decoration: none;
   transition: color 0.12s linear;
   &:hover {
-    color: #26364A;
+    color: $home-hover;
   }
 }
 
 .site-header {
   z-index: 20;
+  background-color: $bg-blue;
   position: relative;
   min-height: 50px;
 }
@@ -30,7 +35,7 @@ a {
 .menu-items {
   width: 100%;
   text-align: right;
-  background: #7697BE;
+  background: $bg-blue;
   overflow: hidden;
   padding: 0;
   position: relative;
@@ -76,6 +81,76 @@ a {
   }
 
 }
+
+/* Page Content styles */
+/* ----------------------------------------------------------*/
+
+.page-content {
+  padding: 30px 0;
+  background-color: #fff;
+}
+
+.post-header { margin: 10px 0 30px; }
+
+.post-header h1 {
+  font-size: 42px;
+  letter-spacing: -1.75px;
+  line-height: 1;
+  font-weight: 300;
+  color: darken($bg-blue, 15%);
+}
+
+.post-header .meta {
+  font-size: 15px;
+  color: #818181;
+  margin-top: 5px;
+}
+
+.post-content { margin: 0 0 30px; }
+
+.post-content > * { margin: 20px 0; }
+
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  line-height: 1;
+  font-weight: 300;
+  margin: 40px 0 20px;
+  color: darken($bg-blue, 15%);
+
+}
+
+
+/* Home styles */
+/* ----------------------------------------------------------*/
+
+.home h1 { margin-bottom: 25px; }
+
+.posts { list-style-type: none; }
+
+.posts li { margin-bottom: 30px; }
+
+.posts .post-link {
+  font-size: 24px;
+  letter-spacing: -1px;
+  line-height: 1;
+  color: darken($bg-blue, 10%);
+  transition: color 0.25s ease-in-out;
+  &:hover {
+    color: $home-hover;
+  }
+}
+
+.posts .post-date {
+  display: block;
+  font-size: 15px;
+  color: #818181;
+}
+
 
 .tm-logo {
   font-weight: 100;

@@ -136,74 +136,12 @@ h1, h2, h3, h4, h5, h6, .post-link {
 }
 
 
-/* Page Content styles */
-/* ----------------------------------------------------------*/
-
-.page-content {
-  padding: 30px 0;
-  background-color: #fff;
-}
-
-
-/* Home styles */
-/* ----------------------------------------------------------*/
-
-.home h1 { margin-bottom: 25px; }
-
-.posts { list-style-type: none; }
-
-.posts li { margin-bottom: 30px; }
-
-.posts .post-link {
-  font-size: 24px;
-  letter-spacing: -1px;
-  line-height: 1;
-  color: #5478A1;
-}
-
-.posts .post-date {
-  display: block;
-  font-size: 15px;
-  color: #818181;
-}
 
 
 /* Post styles */
 /* ----------------------------------------------------------*/
 
-.post-header { margin: 10px 0 30px; }
 
-.post-header h1 {
-  font-size: 42px;
-  letter-spacing: -1.75px;
-  line-height: 1;
-  font-weight: 300;
-  color: #337AB1;
-}
-
-.post-header .meta {
-  font-size: 15px;
-  color: #818181;
-  margin-top: 5px;
-}
-
-.post-content { margin: 0 0 30px; }
-
-.post-content > * { margin: 20px 0; }
-
-
-.post-content h1,
-.post-content h2,
-.post-content h3,
-.post-content h4,
-.post-content h5,
-.post-content h6 {
-  line-height: 1;
-  font-weight: 300;
-  margin: 40px 0 20px;
-  color: #337AB1;
-
-}
 
 .post-content h2 {
   font-size: 32px;
