@@ -4,7 +4,7 @@ title: Thomas Maximini - Web and Mobile Developer
 email: tmaximini@gmail.com
 username: tmaximini
 description: "Hello! My name is Thomas and I am a web and mobile developer from Berlin."
-baseurl: ""
+baseurl: "http://localhost:4000/"
 
 collections:
   projects:

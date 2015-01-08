@@ -8,8 +8,8 @@ My expertise is web development, both frontend and backend. I love writing Javas
 
 Currently I spend a lot of time writing Angular.js, before that I focused on Backbone and jQuery. Still nothing beats vanilla JS.
 
-On the backend I tend to use Node.js w/ Express and Nginx, before that I used Ruby on Rails for a while, but writing "Full Stack" Javascript is just too convenient. In a previous life I used to build websites with Typo3 and PHP.
+On the backend I tend to use Node.js w/ Express and Nginx, before that I used Ruby on Rails for a while, but writing "Full Stack" Javascript is just too convenient. In a previous life I even built websites with Typo3 and PHP.
 
 I am also building mobile applications with Cordova and the Ionic Framework, which is lots of fun. I could not live without my beloved sublime text 2.
-When I am not programming, I like DJing, running and climbing.
-Feel free to contact me if you want to work with me, I am always interested in exciting projects.
+When not programming, you can find me running, DJing (I am an avid Vinyl Collector) or hanging out with friends.
+Feel free to contact me if you want to talk web dev, I am always interested in exciting projects.

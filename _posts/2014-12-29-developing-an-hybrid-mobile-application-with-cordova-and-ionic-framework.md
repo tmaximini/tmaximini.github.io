@@ -2,6 +2,7 @@
 title: Developing an hybrid mobile application with Cordova and Ionic Framework
 layout: post
 date: 2014-12-29
+image: images/flea.jpg
 ---
 
 ## Hybrid mobile applications

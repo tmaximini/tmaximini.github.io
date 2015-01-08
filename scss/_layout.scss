@@ -62,7 +62,16 @@ a {
   }
 }
 
+.inner-page-link {
+  display: none;
+  color: #fff;
+  padding: 0 10px;
+  font-size: 1rem;
 
+  &:last-child {
+    padding-right: 0;
+  }
+}
 
 .page-content {
   position: relative;
@@ -86,14 +95,14 @@ a {
 /* ----------------------------------------------------------*/
 
 .page-content {
-  padding: 30px 0;
+  padding: 2rem 0;
   background-color: #fff;
 }
 
 .post-header { margin: 10px 0 30px; }
 
 .post-header h1 {
-  font-size: 42px;
+  font-size: 2.2rem;
   letter-spacing: -1.75px;
   line-height: 1;
   font-weight: 300;
@@ -135,7 +144,7 @@ a {
 .posts li { margin-bottom: 30px; }
 
 .posts .post-link {
-  font-size: 24px;
+  font-size: 1.5rem;
   letter-spacing: -1px;
   line-height: 1;
   color: darken($bg-blue, 10%);
