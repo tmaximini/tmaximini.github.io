@@ -8,7 +8,8 @@ image: images/flea.jpg
 ## Hybrid mobile applications
 I recently spend a good amount of time developing an application using the [Ionic Framework](http://ionicframework.com/). In this post I am going to share my experiences and the things I learned on the way.
 
-If you don't know, Ionic is a framework that sits on top of [Angular.js](https://angularjs.org/) that is designed to let you write mobile hybrid apps. Mobile hybrid applications are applications entirely written in HTML5, CSS and Javascript and then get packaged into an installable, hopefully native looking application that can be distributed via the different App Stores.
+In case you don't know, Ionic is a framework that sits on top of [Angular.js](https://angularjs.org/) that is designed to let you write mobile hybrid apps. Mobile hybrid applications are applications entirely written in HTML5, CSS and Javascript and then get packaged into an installable, hopefully native looking application that can be distributed via the different App Stores.
+Despite only being 1 year old, there have been already 320.000 apps been created with Ionic ([Source](http://ionicframework.com/blog/ionic-one-year-review/)).
 The difference is that hybrid applications live entirely inside a *WebView* of the device's operating system.
 This means that these applications will be affected by the different browser versions, OS versions and by the performance of the devices they are installed on. Both [iOS](http://nshipster.com/wkwebkit/) and [Android](https://developer.chrome.com/multidevice/webview/overview) are catching up though with the features and the performance of their WebViews, which is a good thing.
 
