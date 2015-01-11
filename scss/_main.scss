@@ -331,7 +331,7 @@ h1, h2, h3, h4, h5, h6, .post-link {
 
 @media screen and (min-width: 600px) {
   .inner-page-link {
-    display: inline-block;
+    display: inline-block !important;
   }
   .menu-items {
     display: none;
