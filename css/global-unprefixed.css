@@ -1,2 +1,80 @@
-*{margin:0;padding:0;box-sizing:inherit}html,html>div{box-sizing:border-box}svg{pointer-events:none}body{background-color:#6F85A0;color:#ffffff}a{color:#ffffff;text-decoration:none;transition:color 0.12s linear}a:hover{color:#26364A}.site-header{z-index:20;background-color:#6F85A0;position:relative;min-height:50px}.site-footer{position:relative;padding:30px 0}.menu-items{width:100%;text-align:right;background:#6F85A0;overflow:hidden;padding:0;position:relative;width:100%;height:0;z-index:4;display:block;transition:all 0.12s ease-in-out}.menu-items a{padding:0 5px;font-size:1.2rem;opacity:0;transition:opacity 0.25s ease-in-out}.menu-items.visible{border-top:1px dashed #fff;padding:5px 12px;height:40px}.menu-items.visible a{opacity:1}.inner-page-link{display:none;color:#fff;padding:0 10px;font-size:1rem}.inner-page-link:last-child{padding-right:0}.page-content{position:relative}.post{color:#454545}.post a{color:#454545;text-decoration:underline;transition:color 0.25s ease-in-out}.post a:hover,.post a:active{color:#337AB1}.page-content{padding:2rem 0;background-color:#fff}.post-header{margin:10px 0 30px}.post-header h1{font-size:2.2rem;letter-spacing:-1.75px;line-height:1;font-weight:300;color:#4d5f75}.post-header .meta{font-size:15px;color:#818181;margin-top:5px}.post-content{margin:0 0 30px}.post-content>*{margin:20px 0}.post-content h1,.post-content h2,.post-content h3,.post-content h4,.post-content h5,.post-content h6{line-height:1;font-weight:300;margin:40px 0 20px;color:#4d5f75}.home h1{margin-bottom:25px}.posts{list-style-type:none}.posts li{margin-bottom:30px}.posts .post-link{font-size:1.5rem;letter-spacing:-1px;line-height:1;color:#576c85;transition:color 0.25s ease-in-out}.posts .post-link:hover{color:#26364A}.posts .post-date{display:block;font-size:15px;color:#818181}.tm-logo{font-weight:100}.tm-logo b{font-weight:600}.lines-button{padding:1rem 0.5rem;transition:.3s;cursor:pointer;border:0;background:0;user-select:none;border-radius:0.28571rem}.lines-button:hover{opacity:1}.lines-button:active{transition:0}.lines{display:inline-block;width:2rem;height:0.25rem;background:#fff;border-radius:0.14286rem;transition:0.25s;position:relative}.lines:before,.lines:after{display:inline-block;width:2rem;height:0.25rem;background:#fff;border-radius:0.14286rem;transition:0.25s;position:absolute;left:0;content:'';-webkit-transform-origin:0.14286rem center;transform-origin:0.14286rem center}.lines:before{top:0.5rem}.lines:after{top:-0.5rem}.lines-button.close{-webkit-transform:scale3d(0.8, 0.8, 0.8);transform:scale3d(0.8, 0.8, 0.8)}.lines-button.x.close .lines{background:transparent}.lines-button.x.close .lines:before,.lines-button.x.close .lines:after{transform-origin:50% 50%;top:0;width:2rem}.lines-button.x.close .lines:before{transform:rotate3d(0, 0, 1, 45deg)}.lines-button.x.close .lines:after{transform:rotate3d(0, 0, 1, -45deg)}
-/*# sourceMappingURL=global-unprefixed.css.map */
+/*
+Error: Undefined variable: "$bg-blue".
+        on line 4 of scss/_layout.scss
+        from line 11 of scss/global.scss
+
+1: $pink: #FC39C5;
+2: $green: #21CAA3;
+3: $yellow: #E9CB31;
+4: 
+5: $midgray: #383838;
+6: $darkgray: #242424;
+7: 
+8: @import "variables";
+9: @import "reset";
+
+Backtrace:
+scss/_layout.scss:4
+scss/global.scss:11
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:315:in `block (2 levels) in visit_import'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:315:in `map'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:315:in `block in visit_import'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/stack.rb:88:in `block in with_import'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/stack.rb:88:in `with_import'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/exec/sass_scss.rb:396:in `run'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/exec/sass_scss.rb:62:in `process_result'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/exec/base.rb:52:in `parse'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/lib/sass/exec/base.rb:19:in `parse!'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/gems/sass-3.4.5/bin/sass:13:in `<top (required)>'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/bin/sass:23:in `load'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/bin/sass:23:in `<main>'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/bin/ruby_noexec_wrapper:14:in `eval'
+/Users/thomas/.rvm/gems/ruby-2.0.0-p0/bin/ruby_noexec_wrapper:14:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$bg-blue\".\A         on line 4 of scss/_layout.scss\A         from line 11 of scss/global.scss\A \A 1: $pink: #FC39C5;\A 2: $green: #21CAA3;\A 3: $yellow: #E9CB31;\A 4: \A 5: $midgray: #383838;\A 6: $darkgray: #242424;\A 7: \A 8: @import \"variables\";\A 9: @import \"reset\";"; }

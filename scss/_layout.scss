@@ -1,11 +1,8 @@
-$bg-blue: #6F85A0;
-$bg-grey: #4D555F;
-$home-hover: #26364A;
-
 body {
   //background: url(../images/green_cup/green_cup.png) repeat;
   //background: url(../images/halftone/halftone.png) repeat;
   background-color: $bg-blue;
+  //background: linear-gradient(20deg, #667B96 0%, #2B3523 40%, #FFFFFF 100%);
   color: #ffffff;
 }
 
@@ -164,11 +161,22 @@ a {
 .tm-logo {
   font-weight: 100;
   b {
-    font-weight: 600;
+    font-weight: 400;
   }
 }
 
+.social {
+  width: 100%;
+  text-align: center;
 
+  .inner {
+    border-top: 1px dashed lighten($darkgrey, 10%);
+    padding-top: 25px;
+  }
+  .twitter-share-button {
+    float: right;
+  }
+}
 
 
 

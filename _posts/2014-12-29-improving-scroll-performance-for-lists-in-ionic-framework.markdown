@@ -1,5 +1,5 @@
 ---
-title: Developing an hybrid mobile application with Cordova and Ionic Framework
+title: Improving scroll performance for lists in Ionic Framework
 layout: post
 date: 2014-12-29
 image: images/flea.jpg
@@ -20,24 +20,50 @@ When yoiu talk to people about Ionic, they will probably tell you something in t
 What I especially like about Ionic so far is its [excellent documentation](http://ionicframework.com/docs/), the amount of [learning resources](http://learn.ionicframework.com/), the cli tooling and the active community (#ionic at Freenode).
 
 
-## Native scroll ftw!
+## Scroll performance
 One of the big letdowns with Ionic has been the scroll performance. Everything worked great developing on my desktop browser emulating mobile devices, but as soon as we compiled the app on the phone it *lagged*. The lag was real.
 The problem with Ionic lists is, that by default Ionic uses a Javascript based scrolling mechanism, which calculates the scroll position in a view and animates it whenever the view is scrolled. While this looks really good and solves a lot of compatibility issues between different devices and browsers it certainly is a huge performance issue with longer list. For us, lists with around 25-50 items and some images already rendered close to unusable on iPhone4 and 4s. Imagine you'd want to make some timeline app such as Twitter.
 As stated by the core team members, [Ionic is targeted towards newer devices](https://github.com/driftyco/ionic/issues/287#issuecomment-30441099), which makes totally sense from a deveoping point of view. The problem is you can not convince your customer's that the app can only run on newer devices, it should run performant on older devices as well.
 
-There are two solutions for the scrolling performance problem:
+As far as I can tell there are two main solutions for the scrolling performance problem:
+
 1. Using [collection-repeat](http://ionicframework.com/docs/api/directive/collectionRepeat/) instead ng-repeat
 2. Using native scroll
 
+We will take a look at both of these now.
+
 ### collection-repeat
-Quoting the docs, *collection-repeat is a directive that allows you to render lists with thousands of items in them, and experience little to no performance penalty*. This sounds pretty awesome. And it is pretty awesome too: The idea behind collection-repeat is that it renders only the items that are currently visible inside the viewport, so if you have 2000 items but only 10 items fit into your screen than 10 items will be rendered instead of 2000 (The problem with the performance of huge lists is usually the *painting* in the browser). The problem with collection-repeat however is that the items need to be of the same height (more or less at least, as collection-item-height takes an expression and thus also could be a  function). So basically  _it makes a responsive layout impossible_, assuming you want to use 100% width and height: auto; or something like this.
-It is very useful though for simple items of the same height.
+Quoting the docs here:
 
-### native scrolling
+> collection-repeat is a directive that allows you to render lists with thousands of items in them, and experience little to no performance penalty.
 
--  the problem is it not supported pull-to-refresh and infinite-load.
-- supported in ion-content http://ionicframework.com/docs/api/directive/ionContent/
-- super performant
-- more work to get functionality right, differences on iOS and Android
-- still only solution for flexible, performant lists
+This sounds pretty awesome. And it is really awesome too: The idea behind collection-repeat is that it renders only the items that are currently visible inside the viewport, so if you have 2000 items but only 10 items fit into your screen than 10 items will be rendered instead of 2000 (The problem with the performance of huge lists is usually the *painting* in the browser). The problem with collection-repeat however is that the items need to be of the same height (more or less at least, as collection-item-height takes an expression and thus also could be a function). So basically  _it makes a responsive layout impossible_, assuming you want to use 100% width and height: auto; or something like this.
 
+{% highlight html %}
+<div class="contact-list">
+  <div ng-repeat="person in contacts | filter:{name: searchModel.name}"
+     class="item item-icon-right"
+     ng-class="{'selected': option.active}"
+     ng-click="showDetails(person)">
+      <span ng-bind="::person.name"></span>
+  </div>
+</div>
+{% endhighlight %}
+
+
+It is very useful though for simple items of the same fixed height, such as simple lists.
+
+### Native scrolling
+
+Native scrolling means we tell Ionic not to use its [$ionicScrollDelegate](http://ionicframework.com/docs/api/service/$ionicScrollDelegate/) service for scrolling, but instead fall back to the browser's own scrolling behaviour. As scrolling is one of the most basic features of any browser, this usually means we get a great performance on across all devices.
+There are a few drawbacks from this solution though:
+
+* Scroll behaviour might differentiate quite a bit between different browsers and operating systems. This bit us quite a few times, especially with iOS being weird with firing scroll events. See [this blog post by TJ VanToll](http://developer.telerik.com/featured/scroll-event-change-ios-8-big-deal/) for more information on iOS scroll behaviour.
+* By default, no scrollbar is visible (Can be overwritten by CSS).
+* Infinite Scroll and Pull to refresh won't work, we had to write our own solution for both.
+
+To activate native scrolling in Ionic, you just the the `"overflow-scroll = true"` option on [IonContent](http://ionicframework.com/docs/api/directive/ionContent/). It is super performant and was the only valid solution in our case, as we wanted to support also older devices.
+
+### Conclusion
+
+Ionic does a great job at delivering excellent CSS and great directives that enable developers to build good looking with ease. For larger lists or more complex views we might hit performance bottlenecks quickly. In this case native scrolling is the best option for performance gains. These gains however come at the costs of browser and OS inconsistencies and not being able to use certain built-in features of Ionic.

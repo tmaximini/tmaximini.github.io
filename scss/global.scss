@@ -5,6 +5,8 @@ $yellow: #E9CB31;
 $midgray: #383838;
 $darkgray: #242424;
 
+@import "variables";
 @import "reset";
+@import "main";
 @import "layout";
 @import "burger";
