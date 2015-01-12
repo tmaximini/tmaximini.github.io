@@ -21,6 +21,7 @@ exclude: [
   .sass-cache,
   package.json,
   Gruntfile.js,
+  LICENSE.md,
   node_modules,
   readme.md
 ]
