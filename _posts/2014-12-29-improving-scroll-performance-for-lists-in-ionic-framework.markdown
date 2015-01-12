@@ -13,7 +13,7 @@ Despite only being 1 year old, there have been already 320.000 apps been created
 The difference is that hybrid applications live entirely inside a *WebView* of the device's operating system.
 This means that these applications will be affected by the different browser versions, OS versions and by the performance of the devices they are installed on. Both [iOS](http://nshipster.com/wkwebkit/) and [Android](https://developer.chrome.com/multidevice/webview/overview) are catching up though with the features and the performance of their WebViews, which is a good thing.
 
-While Ionic is still a relatively young framework (currently in 1.0.0-beta13 at the time of this writing), hybrid mobile apps have been around for a long time by now. The problem with these apps is that they often feel clunky and slow compared to well-known native apps.
+While Ionic is still a relatively young framework (currently in 1.0.0-beta14 at the time of this writing), hybrid mobile apps have been around for a long time by now. The problem with these apps is that they often feel clunky and slow compared to well-known native apps.
 The main reason for that is not always bad browsers or old hardware but too often it is unperformant and badly optmized code. There are a lot of things to consider when writing performant web applications, especially for lower end devices. We'll get to that in a minute.
 
 ## Ionic, just UI?
@@ -52,7 +52,7 @@ This sounds pretty awesome. And it is really awesome too: The idea behind collec
 {% endhighlight %}
 
 
-It is very useful though for simple items of the same fixed height, such as simple lists.
+It is very useful though for items of the same fixed height, such as simple lists.
 
 ### Native scrolling
 
@@ -64,6 +64,24 @@ There are a few drawbacks from this solution though:
 * Infinite Scroll and Pull to refresh won't work, we had to write our own solution for both.
 
 To activate native scrolling in Ionic, you just the the `"overflow-scroll = true"` option on [IonContent](http://ionicframework.com/docs/api/directive/ionContent/). It is super performant and was the only valid solution in our case, as we wanted to support also older devices.
+
+Infinite scroll could for example easily be implemented like this, with `wrapperEl` being your overflow-scroll IonContent element and `listEl` being the inner stream container, that would contain your ng-repeated list that you want to load new items into.
+
+
+{% highlight javascript %}
+/**
+ * captures all scroll events and checks offset from top and distance from bottom
+ * if we are as close as OFFSET to bottom, we start loading the next page
+ */
+var OFFSET = 200; // how many px from bottom should we start loading
+wrapperEl.addEventListener('scroll', function() {
+    var listRect = listEL.getBoundingClientRect();
+    var wrapRect = wrapperEl.getBoundingClientRect();
+    if (listRect.bottom - OFFSET < wrapRect.height) {
+        scope.nextPage();
+    }
+}, false);
+{% endhighlight %}
 
 ### Conclusion
 
