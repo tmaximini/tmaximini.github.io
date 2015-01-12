@@ -1,8 +1,7 @@
 ---
 title: Improving scroll performance for lists in Ionic Framework
 layout: post
-date: 2014-12-29
-image: images/flea.jpg
+date: 2015-01-12
 ---
 
 ## Hybrid mobile applications
