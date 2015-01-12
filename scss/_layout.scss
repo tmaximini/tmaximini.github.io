@@ -170,13 +170,15 @@ a {
 .social {
   width: 100%;
   text-align: center;
-
+  position: relative;
+  height: 50px;
   .inner {
     border-top: 1px dashed lighten($darkgrey, 10%);
     padding-top: 25px;
+
   }
   .twitter-share-button {
-    float: right;
+    float: left;
   }
 }
 
