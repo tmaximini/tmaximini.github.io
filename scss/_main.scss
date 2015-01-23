@@ -89,28 +89,17 @@ h1, h2, h3, h4, h5, h6, .post-link {
 .site-footer .column { float: left; margin-bottom: 15px; }
 
 .footer-col-1 {
-  width: 270px; /*fallback*/
-  width: -webkit-calc(35% - 10px);
-  width: -moz-calc(35% - 10px);
-  width: -o-calc(35% - 10px);
-  width: calc(35% - 10px);
+  width: 45%;
   margin-right: 10px
 }
-.footer-col-2 {
-  width: 175px; /*fallback*/
-  width: -webkit-calc(23.125% - 10px);
-  width: -moz-calc(23.125% - 10px);
-  width: -o-calc(23.125% - 10px);
-  width: calc(23.125% - 10px);
-  margin-right: 10px
-}
+
 .footer-col-3 {
-  width: 335px; /*fallback*/
-  width: -webkit-calc(41.875%);
-  width: -moz-calc(41.875%);
-  width: -o-calc(41.875%);
-  width: calc(41.875%);
+  width: 45%;
+  float: right;
   text-align: right;
+  ul {
+    margin-top: 10px;
+  }
 }
 
 .site-footer ul { list-style: none; }
@@ -182,7 +171,15 @@ h1, h2, h3, h4, h5, h6, .post-link {
   color: #FFF;
 }
 
-.post code { padding: 2px 5px; }
+.post code {
+  padding: 2px 5px;
+  font-size: 1.1rem;
+}
+
+.highlight code {
+  padding: 5px 0;
+  font-size: .9rem;
+}
 
 .post ul,
 .post ol { margin-left: 1.35em; }
@@ -332,6 +329,28 @@ h1, h2, h3, h4, h5, h6, .post-link {
   font-family: 'Montserrat', sans-serif;
 }
 
+.tm-personal {
+  &:after {
+    clear: both;
+  }
+}
+
+.tm-image {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  float: left;
+  img {
+    max-width: 100%;
+    border-radius: 50%;
+  }
+}
+.tm-text {
+  float: left;
+  padding: 0 20px;
+  margin-top: 10px;
+  width: 250px;
+}
 
 @media screen and (min-width: 600px) {
   .inner-page-link {
