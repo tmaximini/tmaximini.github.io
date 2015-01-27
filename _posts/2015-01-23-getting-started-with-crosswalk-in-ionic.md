@@ -85,6 +85,9 @@ This is usually a permission problem. Make sure you have all the needed permissi
 
 #### SSL Certificate Error Popup
 If you your app makes requests against an HTTPS endpoint, you might get an error popup saying 'SSL certificate error' when using Crosswalk.
+
+![SSL certificate error]({{ site.url }}/images/posts/xwalk/ssl_error.png "Oh snap! SSL certificate error.")
+
 This happened in our last app, also our certificate was perfectly fine. In Crosswalk 10 they added an `onReceivedSslError` event handler that you can hack in order to supress this popup. I can however only explain it for the older method:
 
 Open the file `CordovaWebViewClient.java` `/android/CordovaLib/src/ord/apache/cordova/` and find the `onReceivedSslError` method. Then change this method to the following:

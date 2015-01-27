@@ -127,10 +127,15 @@ h1, h2, h3, h4, h5, h6, .post-link {
 /* ----------------------------------------------------------*/
 
 .post-content {
-    font-size: 1.1rem;
-    blockquote {
-      font-size: 1.5rem;
-    }
+
+  img {
+    max-width: 100%;
+  }
+
+  font-size: 1.1rem;
+  blockquote {
+    font-size: 1.5rem;
+  }
 }
 
 .post-content h2 {
