@@ -20,7 +20,7 @@ There are also [different versions of Crosswalk](https://crosswalk-project.org/d
 
 To be able to use Crosswalk 10, I found I needed to be on cordova v3.6 (`npm install -g cordova@~3.6`), while for Crosswalk 9 I still needed to use cordova 3.5. Luckily, there is #crosswalk on Freenode IRC with a bunch of friendly and helpful people if you run into trouble.
 
-## The 'old' way
+## Method 1: The 'old' way
 I will briefly explain how you'd go about adding Crosswalk to your project without using the Ionic CLI to show what parts of your cordova application actually are replaced when using it. Note that this technique should work in all Cordova projects, not only in Ionic.
 
 First you go the [xwalk downloads page](https://crosswalk-project.org/documentation/downloads.html) and grab the Cordova Android Version. I have a Nexus5 phone so I download the one for the ARM platform. The unzipped folder should look like this:
@@ -52,7 +52,7 @@ That's already all there is to it, now you can confirm that it is working by run
 That's crosswalk 10 with Chrome 39 at work right there. Yay!
 
 
-## The new way
+## Method 2: The ionic way
 As I mentioned, the Ionic team added Crosswalk to their CLI recently, so installing it into our apps should be even easier now! Just make sure you updated your ionic CLI to at least version 1.3.2 (`npm update -g ionic`). I'll just go ahead and remove the whole android platform from our test project and add it again, so we can start fresh.
 {% highlight bash %}
 ionic platform remove android
@@ -88,7 +88,7 @@ If you your app makes requests against an HTTPS endpoint, you might get an error
 
 ![SSL certificate error]({{ site.url }}/images/posts/xwalk/ssl_error.png "Oh snap! SSL certificate error.")
 
-This happened in our last app, also our certificate was perfectly fine. In Crosswalk 10 they added an `onReceivedSslError` event handler that you can hack in order to supress this popup. I can however only explain it for the older method:
+This happened in our last app, also our certificate was perfectly fine. In Crosswalk 10 they added an `onReceivedSslError` event handler that you can hack in order to supress this popup. After debugging this a long time, I finally  managed to work around this error. I can however only explain it for the first method, as the Ionic CLI Xwalk files are bit different from the downloaded ones described above (That's why I stick with method 1 for now).
 
 Open the file `CordovaWebViewClient.java` `/android/CordovaLib/src/ord/apache/cordova/` and find the `onReceivedSslError` method. Then change this method to the following:
 
