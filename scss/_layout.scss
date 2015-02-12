@@ -191,4 +191,17 @@ a {
   }
 }
 
-
+table {
+  thead {
+    text-align: left;
+  }
+   * {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+  }
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  td, th {
+    padding: 5px;
+  }
+}
