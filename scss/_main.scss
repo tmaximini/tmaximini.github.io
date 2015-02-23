@@ -9,10 +9,9 @@
 html, body { min-height: 100%; }
 
 body {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 { font-weight: 700; }
@@ -132,7 +131,7 @@ h1, h2, h3, h4, h5, h6, .post-link {
     max-width: 100%;
   }
 
-  font-size: 1.1rem;
+  font-size: 16px;
   blockquote {
     font-size: 1.5rem;
   }
