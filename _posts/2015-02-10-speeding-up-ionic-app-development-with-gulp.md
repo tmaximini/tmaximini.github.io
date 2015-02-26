@@ -216,3 +216,9 @@ gulp.task('index', function() {
 
 The entire gulpfile can be found [here](https://github.com/tmaximini/ionic-gulp-seed).
 
+## UPDATE: Yeoman generator now available
+
+Just a quick update, I just published a yeoman generator for quickly scaffolding out an Ionic app with the above gulp workflow. You can find the generator here: https://github.com/tmaximini/generator-ionic-gulp.
+
+Go forth and make apps! <3
+
