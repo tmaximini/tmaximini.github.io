@@ -16,7 +16,7 @@ While Ionic is still a relatively young framework (currently in 1.0.0-beta14 at 
 The main reason for that is not always bad browsers or old hardware but too often it is unperformant and badly optmized code. There are a lot of things to consider when writing performant web applications, especially for lower end devices. We'll get to that in a minute.
 
 ## Ionic, just UI?
-When yoiu talk to people about Ionic, they will probably tell you something in the veins of "iOS7.css" or "that's just an UI Layer around Angular". Which is kind of true as a huge part of Ionic is about giving you a beautiful, iOS7'ish look. Basically it is an opinionated collection of Angular directives and css classes that cover a lot of use cases when building an app. [Swipeable boxes](http://ionicframework.com/docs/api/directive/ionSlideBox/), [pull-to-refresh lists](http://ionicframework.com/docs/api/directive/ionRefresher/), [tab navigations](http://ionicframework.com/docs/api/directive/ionTabs/) [etc](http://ionicframework.com/docs/api/directive/ionSideMenus/). You name it.
+When you talk to people about Ionic, they will probably tell you something in the veins of "iOS7.css" or "that's just an UI Layer around Angular". Which is kind of true as a huge part of Ionic is about giving you a beautiful, iOS7'ish look. Basically it is an opinionated collection of Angular directives and css classes that cover a lot of use cases when building an app. [Swipeable boxes](http://ionicframework.com/docs/api/directive/ionSlideBox/), [pull-to-refresh lists](http://ionicframework.com/docs/api/directive/ionRefresher/), [tab navigations](http://ionicframework.com/docs/api/directive/ionTabs/) [etc](http://ionicframework.com/docs/api/directive/ionSideMenus/). You name it.
 What I especially like about Ionic so far is its [excellent documentation](http://ionicframework.com/docs/), the amount of [learning resources](http://learn.ionicframework.com/), the cli tooling and the active community (#ionic at Freenode).
 
 
@@ -55,10 +55,10 @@ It is very useful though for items of the same fixed height, such as simple list
 
 ### Native scrolling
 
-Native scrolling means we tell Ionic not to use its [$ionicScrollDelegate](http://ionicframework.com/docs/api/service/$ionicScrollDelegate/) service for scrolling, but instead fall back to the browser's own scrolling behaviour. As scrolling is one of the most basic features of any browser, this usually means we get a great performance on across all devices.
+Native scrolling means we tell Ionic not to use its [$ionicScrollDelegate](http://ionicframework.com/docs/api/service/$ionicScrollDelegate/) service for scrolling, but instead fall back to the browser's own scrolling behaviour. As scrolling is one of the most basic features of any browser, this usually means we get a great performance across all devices.
 There are a few drawbacks from this solution though:
 
-* Scroll behaviour might differentiate quite a bit between different browsers and operating systems. This bit us quite a few times, especially with iOS being weird with firing scroll events. See [this blog post by TJ VanToll](http://developer.telerik.com/featured/scroll-event-change-ios-8-big-deal/) for more information on iOS scroll behaviour.
+* Scroll behaviour might differentiate quite a bit between different browsers and operating systems. This bit us a few times, especially with iOS being weird with firing scroll events. See [this blog post by TJ VanToll](http://developer.telerik.com/featured/scroll-event-change-ios-8-big-deal/) for more information on iOS scroll behaviour.
 * By default, no scrollbar is visible (Can be overwritten by CSS).
 * Infinite Scroll and Pull to refresh won't work, we had to write our own solution for both.
 
