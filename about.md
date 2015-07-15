@@ -6,10 +6,9 @@ permalink: /about/
 
 My expertise is web development, both frontend and backend. I love writing Javascript, HTML5, Sass, etc. I enjoy picking up new technologies, though it is impossible to follow everything at the current pace in web dev world.
 
-At the moment I spend a lot of time writing Angular.js, before that I focused on Backbone and jQuery. I value the right tool for the right job over the latest alpha of hype.js.
+I enjoy all things Javascript, from Angular and React on the front-end to Express and MongoDB on the backend and Ionic / Cordova for mobile apps.
 
-On the backend I tend to use Node.js w/ Express behind Nginx, before that I used Ruby on Rails for a while, but writing "Full Stack" Javascript is just too convenient, especially with the JS ecosystem and community growing stronger from year to year.
+Although I always try to stay up to date with the latest web technologies I strongly value the right tool for the right job over the latest alpha of hype.js.
 
-I am also into mobile apps with Cordova and the Ionic Framework, as well as some hardware hacking on Arduino and Tessel, which is lots of fun.
-When not programming, you can find me hanging out with my friends, going for a run if I feel sporty or creating repetitive electronic dance music in the basement.
+When not programming, you can find me hanging out with my friends, traveling with my girlfriend or producing music in the studio.
 Feel free to contact me if you want to work with me or just talk web dev, I am always interested in exciting projects.

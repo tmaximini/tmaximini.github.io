@@ -15,6 +15,13 @@ a {
   }
 }
 
+a.all-articles {
+  color: #818181;
+  &:hover {
+    color: $home-hover;
+  }
+}
+
 .site-header {
   z-index: 20;
   background-color: $bg-blue;
