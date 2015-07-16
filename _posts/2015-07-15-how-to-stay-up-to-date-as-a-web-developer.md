@@ -59,7 +59,7 @@ Here is a list of [RSS feeds that's potentially interesting for web developers](
 
 ## IRC
 
-The older generation probably still remembers IRC channels. It's a simple text based chat protocol and there are channels dedicated to a lot or technologies. These are usually good places to ask for help when you are stuck, because they are usually populated around the clock from people of different time zones. I just made it a habit to have my IRC client (I use [LimeChat](http://limechat.net/)) most of the time while working. A couple of channels I hang out in (all on Freenode):
+The older generation probably still remembers IRC channels. It's a simple text based chat protocol and there are channels dedicated to a lot of open-source technologies. These are usually good places to ask for help when you are stuck, because they are usually populated around the clock from people of different time zones. I just made it a habit to have my IRC client (I use [LimeChat](http://limechat.net/)) most of the time while working. A couple of channels I hang out in (all on Freenode):
 
 - \#angularjs
 - \#cordova
