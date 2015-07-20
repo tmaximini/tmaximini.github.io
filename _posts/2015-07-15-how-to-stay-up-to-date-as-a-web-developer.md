@@ -21,6 +21,7 @@ Newsletters are one of my favorite format to keep me up to date: You get them in
 - [https://wdrl.info](https://wdrl.info)
 - [https://umaar.com/dev-tips](https://umaar.com/dev-tips)
 - [http://adripofjavascript.com](http://adripofjavascript.com)
+- [https://freshbrewed.co/frontend/](https://freshbrewed.co/frontend/)
 - [http://www.ng-newsletter.com](http://www.ng-newsletter.com)
 
 There are also more specialized ones such as:
